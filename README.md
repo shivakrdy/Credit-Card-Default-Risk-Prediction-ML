@@ -1,5 +1,10 @@
 # Credit Card Default Risk Prediction – Machine Learning Pipeline
 
+[![Python](https://img.shields.io/badge/Python-Data--Science-blue?logo=python)](https://www.python.org/)
+[![Pandas](https://img.shields.io/badge/Pandas-Data--Wrangling-yellow?logo=pandas)](https://pandas.pydata.org/)
+[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange?logo=jupyter)](https://jupyter.org/)
+[![UT Dallas](https://img.shields.io/badge/UTD-Project-green?logo=academia)](https://www.utdallas.edu/)
+
 This repository showcases a data-driven approach to predicting credit card default using real-world behavioral and financial data. The project covers an end-to-end pipeline — from preprocessing and feature engineering to dimensionality reduction and advanced classification — built to simulate a real-world credit risk scoring system.
 
 ---
