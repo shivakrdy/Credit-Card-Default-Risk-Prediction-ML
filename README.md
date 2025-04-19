@@ -1,98 +1,117 @@
-# Credit Card Default Risk Prediction Using Machine Learning
+# Credit Card Default Risk Prediction – Machine Learning Pipeline
 
-This project applies supervised machine learning techniques to predict credit card default risk based on real-world data from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients). The project includes thorough data preprocessing, handling class imbalance, dimensionality reduction using PCA, and performance evaluation across several models.
+This repository showcases a data-driven approach to predicting credit card default using real-world behavioral and financial data. The project covers an end-to-end pipeline — from preprocessing and feature engineering to dimensionality reduction and advanced classification — built to simulate a real-world credit risk scoring system.
 
 ---
 
-## 📁 Repository Structure
+## Objective
 
-```
-Credit-Card-Default-Prediction-ML/
-│
-├── Credit_Default_Risk_Prediction.ipynb
-├── default of credit card clients.xls
-├── Credit_Default_Project_Report.pdf
-└── README.md
-```
+To develop a supervised learning model that accurately predicts whether a client will default on their credit card payment in the upcoming month. The goal is to extract actionable insights from behavioral features and optimize model performance in the presence of imbalanced classes.
 
 ---
 
 ## Dataset
 
-- Source: [UCI - Default of Credit Card Clients](https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients)
-- Observations: 30,000 credit card holders
-- Target: `default.payment.next.month` (binary: 1 = default, 0 = not default)
-- Features include:
-  - Demographics (Age, Sex, Education, Marriage)
-  - Credit limits and payment status (6 months)
-  - Billing amounts and previous payments
+- **Source:** [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients)
+- **Records:** 30,000 credit card clients
+- **Features:**
+  - Demographics: Age, Sex, Education, Marital Status
+  - Credit and payment history (last 6 months)
+  - Past bill amounts and repayments
+- **Target Variable:** `default.payment.next.month`  
+  *(1 = default, 0 = not default)*
 
 ---
 
-## Project Workflow
+## 🗂️ Repository Contents
 
-### 1. **Exploratory Data Analysis**
-- Categorical and continuous variable inspection
-- Target distribution analysis (class imbalance)
-- Correlation heatmap and feature relationships
+```
+Credit-Card-Default-Prediction-ML/
+│
+├── Credit_Default_Risk_Prediction.ipynb       # Full analysis and model pipeline
+├── default_of_credit_card_clients.xls         # Dataset
+├── Credit_Default_Project_Report.pdf          # Formal PDF report with insights
+└── README.md
+```
 
-### 2. **Data Preprocessing**
-- Handling invalid categorical values (e.g., unknown education/marriage categories)
-- One-hot encoding of categorical features
-- Feature scaling using StandardScaler and MinMaxScaler
-- Dimensionality Reduction using PCA
+---
 
-### 3. **Class Imbalance Handling**
-- Oversampling: SMOTE (Synthetic Minority Oversampling Technique)
-- Undersampling: Cluster Centroid method
 
-### 4. **Classification Models**
-- **Logistic Regression** with L2 regularization
-- **Decision Tree and Random Forest**
-- **Support Vector Machine (SVM)** with RBF Kernel
-- Hyperparameter tuning for each algorithm
-- Train-test split using stratified sampling
+## Project Pipeline
+
+### Exploratory Data Analysis (EDA)
+- Identified class imbalance and skewness in features
+- Correlation matrix and statistical distributions
+- Uncovered hidden patterns in repayment behavior and bill history
+
+### Preprocessing
+- Handled invalid and unknown categorical values
+- Applied one-hot encoding for nominal categories
+- Scaled numerical features using MinMaxScaler and StandardScaler
+
+### Dimensionality Reduction
+- Applied **PCA** to reduce multicollinearity and capture 99% variance
+- Final model trained on top 12 principal components
+
+### Imbalanced Data Strategy
+- Addressed class imbalance using:
+  - **SMOTE (Synthetic Minority Oversampling Technique)**
+  - **Cluster Centroids (undersampling)**
+  - Stratified train-test split
+
+### Models Trained
+- **Logistic Regression**
+- **Decision Tree**
+- **Random Forest**
+- **Support Vector Machine (SVM)**
+- Used GridSearchCV and cross-validation for hyperparameter tuning
 
 ---
 
 ## Evaluation Metrics
 
-- **Accuracy** and **F1-Score**
-- **Confusion Matrix**
-- **Precision/Recall**
-- **AUC-ROC Curve**
+- Accuracy, Precision, Recall, F1-Score
+- Confusion Matrix and Classification Report
+- ROC Curve and AUC Score
+- Comparative Model Performance Summary
 
-> Best results achieved with **SVM + PCA + SMOTE**, reaching an F1-score of **0.5247**.
-
----
-
-## Key Highlights
-
-- Applied PCA to retain 99% variance with 12 principal components
-- Performed advanced resampling techniques for imbalance management
-- Documented comparative performance across models in the final report
+> **Best Model:** SVM with PCA + SMOTE  
+> Demonstrated strong recall under balanced sensitivity-precision tradeoff
 
 ---
 
-## Project Files
 
-- **Credit_Default_Risk_Prediction.ipynb** – Full Jupyter notebook with code and analysis
-- **default of credit card clients.xls** – Dataset
-- **Credit_Default_Project_Report.pdf** – PDF report with summary, visualizations, and evaluation tables
+## Key Insights
+
+- Clients aged 30–40 had the highest risk of default
+- High credit limits didn’t correlate with repayment reliability
+- Late payments in recent months are top predictors of default
+- Dimensionality reduction with PCA improved model generalizability
 
 ---
 
-## 🙋‍♂️ Author
+## Tech Stack
+
+- **Language:** Python 3.8+
+- **IDE:** Jupyter Notebook
+- **Libraries:** pandas, numpy, seaborn, matplotlib, scikit-learn, imblearn
+- **Techniques:** PCA, SMOTE, Class Balancing, SVM, Tree-based models
+
+---
+
+## 👤 Author
 
 **Shiva Kumar Reddy Koppula**  
-Graduate Student – Business Analytics  
-The University of Texas at Dallas
+Graduate Student – Artificial Intelligence & Business Analytics  
+The University of Texas at Dallas  
+GitHub: [@shivakrdy](https://github.com/shivakrdy)
 
 ---
 
-## Acknowledgements
+## 📚 References
 
-- Dataset from Yeh, I. C., & Lien, C. H. (2009), UCI ML Repository
-- Guidance from Professor Jason Parker, BUAN 6340 – Spring 2024
+- UCI Credit Default Dataset: Yeh, I. C., & Lien, C. H. (2009)
+- Course: Predictive Analytics, Spring 2024, Instructor: Jason Parker
 
 ---
+
