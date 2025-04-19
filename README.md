@@ -108,7 +108,7 @@ GitHub: [@shivakrdy](https://github.com/shivakrdy)
 
 ---
 
-## 📚 References
+## References
 
 - UCI Credit Default Dataset: Yeh, I. C., & Lien, C. H. (2009)
 - Course: Predictive Analytics, Spring 2024, Instructor: Jason Parker
