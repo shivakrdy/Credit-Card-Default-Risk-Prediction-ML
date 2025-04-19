@@ -17,7 +17,7 @@ Credit-Card-Default-Prediction-ML/
 
 ---
 
-## 📊 Dataset
+## Dataset
 
 - Source: [UCI - Default of Credit Card Clients](https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients)
 - Observations: 30,000 credit card holders
@@ -29,7 +29,7 @@ Credit-Card-Default-Prediction-ML/
 
 ---
 
-## 🔍 Project Workflow
+## Project Workflow
 
 ### 1. **Exploratory Data Analysis**
 - Categorical and continuous variable inspection
@@ -55,7 +55,7 @@ Credit-Card-Default-Prediction-ML/
 
 ---
 
-## 📈 Evaluation Metrics
+## Evaluation Metrics
 
 - **Accuracy** and **F1-Score**
 - **Confusion Matrix**
@@ -66,7 +66,7 @@ Credit-Card-Default-Prediction-ML/
 
 ---
 
-## 📌 Key Highlights
+## Key Highlights
 
 - Applied PCA to retain 99% variance with 12 principal components
 - Performed advanced resampling techniques for imbalance management
@@ -74,7 +74,7 @@ Credit-Card-Default-Prediction-ML/
 
 ---
 
-## 📎 Project Files
+## Project Files
 
 - **Credit_Default_Risk_Prediction.ipynb** – Full Jupyter notebook with code and analysis
 - **default of credit card clients.xls** – Dataset
@@ -90,7 +90,7 @@ The University of Texas at Dallas
 
 ---
 
-## 🧠 Acknowledgements
+## Acknowledgements
 
 - Dataset from Yeh, I. C., & Lien, C. H. (2009), UCI ML Repository
 - Guidance from Professor Jason Parker, BUAN 6340 – Spring 2024
